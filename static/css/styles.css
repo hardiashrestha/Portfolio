@@ -17,15 +17,14 @@ body {
 
 /* Navbar styles */
 .navbar {
-    background-color: rgba(68, 71, 90, 0.8); /* Semi-transparent background */
-    padding: 5px 0; /* Reduce vertical padding */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-    height: 60px; /* Set a fixed height for the navbar */
+    background-color: rgba(68, 71, 90, 0.9); /* Slightly darker for contrast */
+    padding: 10px 0; /* More padding for a cleaner look */
 }
 
+/* Navbar link styles */
 .navbar-nav .nav-link {
-    padding: 5px 15px; /* Reduce padding for nav links */
-    font-size: 16px; /* Adjust font size if necessary */
+    padding: 10px 15px; /* Increased padding for nav links */
+    font-size: 18px; /* Adjust font size for better readability */
     color: #f8f8f2; /* Text color for nav links */
 }
 
@@ -35,11 +34,11 @@ body {
 
 /* Section styles */
 .section {
-    padding: 20px;
+    padding: 40px 20px; /* More padding for sections */
     background-color: #44475a;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* Space between sections */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin-bottom: 30px; /* Space between sections */
     padding-top: 80px; /* Add padding to the top to prevent overlap */
 }
 
@@ -84,16 +83,40 @@ header p {
     background-color: #44475a;
     color: #f8f8f2;
     border: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center; /* Center text in card */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
 }
 
 .tech-card:hover {
     background-color: #6272a4; /* Change background on hover */
+    transform: translateY(-5px); /* Slight lift effect */
 }
 
+/* Tech icon styles */
 .tech-icon {
     color: #bd93f9; /* Icon color */
+}
+
+/* Contact Icons styles */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    margin: 20px;
+    color: #f8f8f2; /* Icon color */
+    transition: color 0.3s, transform 0.3s; /* Transition for hover effects */
+}
+
+.contact-icon:hover {
+    color: #bd93f9; /* Change color on hover */
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
 }
 
 /* Footer styles */
@@ -126,22 +149,17 @@ footer {
   .section {
     padding: 15px; /* Adjust padding for smaller screens */
   }
-}
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
 
-.contact-icon {
-  margin: 20px;
-  color: #f8f8f2; /* Icon color */
-  transition: color 0.3s, transform 0.3s; /* Transition for hover effects */
+  .tech-card {
+    margin-bottom: 20px; /* Space between cards on mobile */
+  }
 }
-
-.contact-icon:hover {
-  color: #bd93f9; /* Change color on hover */
-  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+.highlight {
+  background-color: rgba(255, 255, 255, 0.2); /* Light purple background */
+  color: #f090e8; /* Darker text color for contrast */
+  padding: 15px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-top: 20px; /* Space above the highlighted text */
+  font-style: italic; /* Italics for emphasis */
 }
