@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1bd99a004e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,7 +26,7 @@
                     <a class="nav-link" href="#research">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#tech">Tech I Use</a>
                 </li>
             </ul>
         </div>
@@ -42,11 +43,11 @@
         </div>
     </section>
 
-    <section id="research" class="section">
+    <section id="research" class="section text-center">
         <h2>Experience</h2>
         {% for job in data.experience %}
             <p><strong>{{ job.title }}</strong> ({{ job.duration }})</p>
-            <ul>
+            <ul class="list-unstyled"> <!-- Removed bullets -->
                 {% for detail in job.details %}
                     <li>{{ detail }}</li>
                 {% endfor %}
@@ -54,21 +55,85 @@
         {% endfor %}
     </section>
 
-    <section id="skills" class="section">
-        <h2>Skills</h2>
-        <ul>
-            {% for skill in data.skills %}
-                <li>{{ skill }}</li>
-            {% endfor %}
-        </ul>
+    <section id="tech" class="section text-center">
+        <h2>Tech I Use</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-python fa-3x tech-icon"></i>
+                        <h5 class="card-title">Python</h5>
+                        <p class="card-text">High-level programming language for general-purpose tasks.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-html5 fa-3x tech-icon"></i>
+                        <h5 class="card-title">HTML</h5>
+                        <p class="card-text">Markup language for creating web pages.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-css3-alt fa-3x tech-icon"></i>
+                        <h5 class="card-title">CSS</h5>
+                        <p class="card-text">Style sheet language for describing the presentation of a document.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-git-alt fa-3x tech-icon"></i>
+                        <h5 class="card-title">Git</h5>
+                        <p class="card-text">Distributed version control system for tracking changes in source code.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fas fa-database fa-3x tech-icon"></i>
+                        <h5 class="card-title">SQL</h5>
+                        <p class="card-text">Programming language for managing data in relational databases.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-django fa-3x tech-icon"></i>
+                        <h5 class="card-title">Django</h5>
+                        <p class="card-text">High-level Python web framework for rapid development.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-react fa-3x tech-icon"></i>
+                        <h5 class="card-title">React</h5>
+                        <p class="card-text">JavaScript library for building user interfaces.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card tech-card">
+                    <div class="card-body">
+                        <i class="fab fa-js-square fa-3x tech-icon"></i>
+                        <h5 class="card-title">JavaScript</h5>
+                        <p class="card-text">High-level programming language for web development.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="languages" class="section">
-        <h2>Languages</h2>
-        <p>{{ data.languages }}</p>
-    </section>
-    
-    <section id="github-stats" class="section">
+    <section id="github-stats" class="section text-center">
         <h2>GitHub Stats</h2>
         <p align="center">
             <img src="{{ data.github_stats.stats_url }}" alt="GitHub Stats" />

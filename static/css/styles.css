@@ -59,16 +59,17 @@ header p {
   font-size: 20px;
 }
 
+/* Brightness effect with glow */
 .name {
-  background: linear-gradient(90deg, #ffffff, #ffffff);
+  background: linear-gradient(90deg, #ff79c6, #bd93f9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 48px;
   text-shadow: 
-    0 0 5px rgba(255, 185, 223, 0.8), /* Pink glow */
+    0 0 5px rgba(255, 121, 198, 0.8), /* Pink glow */
     0 0 10px rgba(255, 121, 198, 0.6),
-    0 0 15px rgba(138, 132, 145, 0.8), /* Purple glow */
+    0 0 15px rgba(189, 147, 233, 0.8), /* Purple glow */
     0 0 20px rgba(189, 147, 233, 0.5);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -78,6 +79,24 @@ header p {
   filter: brightness(120%);
 }
 
+/* Tech Cards styles */
+.tech-card {
+    background-color: #44475a;
+    color: #f8f8f2;
+    border: none;
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center text in card */
+}
+
+.tech-card:hover {
+    background-color: #6272a4; /* Change background on hover */
+}
+
+.tech-icon {
+    color: #bd93f9; /* Icon color */
+}
+
+/* Footer styles */
 footer {
   background-color: #44475a;
   color: #f8f8f2;
