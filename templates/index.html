@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shrestha Hardia</title>
+    <title>{{ data.name }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
@@ -25,9 +25,6 @@
                     <a class="nav-link" href="#research">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#activities">Activities</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
                 </li>
             </ul>
@@ -37,56 +34,52 @@
 
 <div class="container" style="margin-top: 80px;">
     <section id="about" class="section">
-        <header>
-            <div class="container text-center">
-                <h1><span class="name">Shrestha Hardia</span></h1>
-                <p>Email: hardiashrestha@gmail.com | LinkedIn: 1234...</p>
-                <img align="center" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
-                <p>Ambitious high school graduate with a strong foundation in research and technology.</p>
-                <p>Email: hardiashrestha@gmail.com | LinkedIn: 1234...</p>
-            </div>
-        </header>
+        <div class="text-center">
+            <h1><span class="name">{{ data.name }}</span></h1>
+            <p>Email: {{ data.email }} | LinkedIn: {{ data.linkedin }}</p>
+            <img align="center" alt="Coding" width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
+            <p>{{ data.about }}</p>
+        </div>
     </section>
 
     <section id="research" class="section">
         <h2>Experience</h2>
-        <p><strong>Research Intern, Incognito Blueprints Summer Bootcamp</strong> (May, 2024 – Present)</p>
-        <ul>
-            <li>Employed advanced deep learning techniques to enhance classification accuracy of dermatological diseases.</li>
-            <li>Secured 1st Place, Incognito Blueprints Summer Bootcamp, 2024</li>
-        </ul>
-        <p><strong>Member, Buildspace N&W</strong> (Jun 2024 - Present)</p>
-        <ul>
-            <li>Building a music streaming platform named Streamify (currently under development).</li>
-        </ul>
+        {% for job in data.experience %}
+            <p><strong>{{ job.title }}</strong> ({{ job.duration }})</p>
+            <ul>
+                {% for detail in job.details %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
     </section>
 
     <section id="skills" class="section">
         <h2>Skills</h2>
         <ul>
-            <li>Learning and enhancing Python skills</li>
-            <li>Excellent written and verbal communication skills</li>
-            <li>Team collaboration and leadership</li>
+            {% for skill in data.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
         </ul>
     </section>
 
     <section id="languages" class="section">
         <h2>Languages</h2>
-        <p>Hindi (Native), English</p>
+        <p>{{ data.languages }}</p>
     </section>
     
     <section id="github-stats" class="section">
         <h2>GitHub Stats</h2>
         <p align="center">
-            <img src="https://github-readme-stats.vercel.app/api?username=hardiashrestha&show_icons=true&theme=dracula" alt="GitHub Stats" />
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=hardiashrestha&theme=dracula" alt="GitHub Streak" />
+            <img src="{{ data.github_stats.stats_url }}" alt="GitHub Stats" />
+            <img src="{{ data.github_stats.streak_url }}" alt="GitHub Streak" />
         </p>
     </section>    
 </div>
 
 <footer>
     <div class="container text-center">
-        <p>© 2024 Shrestha Hardia. All rights reserved.</p>
+        <p>© 2024 {{ data.name }}. All rights reserved.</p>
     </div>
 </footer>
 

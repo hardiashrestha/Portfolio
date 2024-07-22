@@ -2,138 +2,109 @@
 
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Set up basic styles */
-  body {
-    font-family: 'Ubuntu', sans-serif;
-    background-color: #282a36;
-    color: #f8f8f2;
-    line-height: 1.6;
-  }
-  
-  /* Navbar styles */
-  .navbar {
-      background-color: rgba(68, 71, 90, 0.8); /* Semi-transparent background */
-      padding: 5px 0; /* Reduce vertical padding */
-      transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
-  .navbar-nav .nav-link {
-      padding: 5px 15px; /* Reduce padding for nav links */
-      font-size: 16px; /* Adjust font size if necessary */
-      color: #f8f8f2; /* Text color for nav links */
-  }
-  
-  .navbar-nav .nav-link:hover {
-      color: #bd93f9; /* Change color on hover */
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #44475a;
-    color: #f8f8f2;
-    padding: 60px 0;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin-bottom: 10px;
-  }
-  
-  header p {
-    font-size: 20px;
-  }
-  
-  /* Brightness effect */
-  .name {
-    background: linear-gradient(90deg, #ff79c6, #bd93f9);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 48px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  
-  .name:hover {
-    transform: scale(1.05);
-    filter: brightness(120%);
-  }
-  
-  /* Navigation styles */
-  nav {
-    padding: 10px 0;
-    text-align: center;
-  }
-  
-  /* Container styles */
-  .container {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
-  }
-  
-  /* Section styles */
-  .section {
-    margin: 40px 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set up basic styles */
+body {
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #282a36;
+  color: #f8f8f2;
+  line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: rgba(68, 71, 90, 0.8); /* Semi-transparent background */
+    padding: 5px 0; /* Reduce vertical padding */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    height: 60px; /* Set a fixed height for the navbar */
+}
+
+.navbar-nav .nav-link {
+    padding: 5px 15px; /* Reduce padding for nav links */
+    font-size: 16px; /* Adjust font size if necessary */
+    color: #f8f8f2; /* Text color for nav links */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bd93f9; /* Change color on hover */
+}
+
+/* Section styles */
+.section {
     padding: 20px;
     background-color: #44475a;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    padding-top: 70px; /* Offset for fixed navbar */
-    margin-top: -70px; /* Negative margin to pull the section up */
+    margin-bottom: 20px; /* Space between sections */
+    padding-top: 80px; /* Add padding to the top to prevent overlap */
 }
-  
-  
-  .section h2 {
-    color: #ff79c6;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #bd93f9;
-    padding-bottom: 10px;
+
+/* Header styles */
+header {
+  background-color: #44475a;
+  color: #f8f8f2;
+  padding: 60px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 20px;
+}
+
+.name {
+  background: linear-gradient(90deg, #ffffff, #ffffff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px;
+  text-shadow: 
+    0 0 5px rgba(255, 185, 223, 0.8), /* Pink glow */
+    0 0 10px rgba(255, 121, 198, 0.6),
+    0 0 15px rgba(138, 132, 145, 0.8), /* Purple glow */
+    0 0 20px rgba(189, 147, 233, 0.5);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.name:hover {
+  transform: scale(1.05);
+  filter: brightness(120%);
+}
+
+footer {
+  background-color: #44475a;
+  color: #f8f8f2;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 36px;
   }
-  
-  .section ul {
-    list-style-type: none;
+
+  header p {
+    font-size: 18px;
   }
-  
-  .section ul li {
-    color: #50fa7b;
-    margin: 5px 0;
+
+  nav a {
+    margin: 0 10px;
+    font-size: 16px;
   }
-  
-  /* Footer styles */
-  footer {
-    background-color: #44475a;
-    color: #f8f8f2;
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+
+  .section {
+    padding: 15px; /* Adjust padding for smaller screens */
   }
-  
-  /* Responsive styles */
-  @media (max-width: 768px) {
-    header h1 {
-      font-size: 36px;
-    }
-  
-    header p {
-      font-size: 18px;
-    }
-  
-    nav a {
-      margin: 0 10px;
-      font-size: 16px;
-    }
-  
-    .section {
-      padding: 15px; /* Adjust padding for smaller screens */
-    }
-  }
-  
+}
