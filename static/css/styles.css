@@ -127,3 +127,21 @@ footer {
     padding: 15px; /* Adjust padding for smaller screens */
   }
 }
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.contact-icon {
+  margin: 20px;
+  color: #f8f8f2; /* Icon color */
+  transition: color 0.3s, transform 0.3s; /* Transition for hover effects */
+}
+
+.contact-icon:hover {
+  color: #bd93f9; /* Change color on hover */
+  transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
