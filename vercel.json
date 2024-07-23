@@ -3,8 +3,7 @@
   "builds": [
     {
       "src": "app.py",
-      "use": "@vercel/python",
-      "config": { "runtime": "python3.9" }
+      "use": "@vercel/python"
     }
   ],
   "routes": [
@@ -12,6 +11,10 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ]
+  ],
+  "env": {
+    "PORT": "3000"
+  },
+  "start": "gunicorn app:app --bind 0.0.0.0:$PORT"
 }
 
