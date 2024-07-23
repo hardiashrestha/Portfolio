@@ -35,9 +35,8 @@ body {
     color: #bd93f9; /* Change color on hover */
 }
 
-/* Section styles */
 .section {
-    padding: 40px 20px; /* More padding for sections */
+    padding: 5vh 5vw; /* More padding for sections */
     background-color: #44475a;
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
