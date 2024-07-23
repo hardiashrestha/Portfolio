@@ -11,10 +11,5 @@
       "src": "/(.*)",
       "dest": "app.py"
     }
-  ],
-  "env": {
-    "PORT": "3000"
-  },
-  "start": "gunicorn app:app --bind 0.0.0.0:$PORT"
+  ]
 }
-
