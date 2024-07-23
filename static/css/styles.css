@@ -1,13 +1,8 @@
-/* styles.css */
-
-/* Reset some default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* Set up  basic styles */
 body {
   font-family: 'Ubuntu', sans-serif;
   background-color:#282a36;
@@ -15,36 +10,31 @@ body {
   color: #f8f8f2;
   line-height: 1.6;
 }
-
-/* Navbar styles */
 .navbar {
-    background-color: rgba(68, 71, 90, 0.7); /* Slightly darker for contrast */
+    background-color: rgba(68, 71, 90, 0.7);
     padding: 10px 0;
     background: rgba(30, 30, 47, 0.8);
     backdrop-filter: blur(5px);
 }
-
-/* Navbar link styles */
 .navbar-nav .nav-link {
-    padding: 10px 15px; /* Increased padding for nav links */
-    font-size: 18px; /* Adjust font size for better readability */
-    color: #f8f8f2; /* Text color for nav links */
+    padding: 10px 15px; 
+    font-size: 18px; 
+    color: #f8f8f2; 
 }
 
 .navbar-nav .nav-link:hover {
-    color: #bd93f9; /* Change color on hover */
+    color: #bd93f9;
 }
 
 .section {
-    padding: 5vh 5vw; /* More padding for sections */
+    padding: 5vh 5vw; 
     background-color: #44475a;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-    margin-bottom: 30px; /* Space between sections */
-    padding-top: 80px; /* Add padding to the top to prevent overlap */
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+    margin-bottom: 30px; 
+    padding-top: 80px;
 }
 
-/* Header styles */
 header {
   background-color: #44475a;
   color: #f8f8f2;
@@ -59,8 +49,6 @@ header h1 {
 header p {
   font-size: 20px;
 }
-
-/* Brightness effect with glow */
 .name {
   background: linear-gradient(90deg, #ff79c6, #bd93f9);
   -webkit-background-clip: text;
@@ -68,9 +56,9 @@ header p {
   -webkit-text-fill-color: transparent;
   font-size: 48px;
   text-shadow: 
-    0 0 5px rgba(255, 121, 198, 0.8), /* Pink glow */
+    0 0 5px rgba(255, 121, 198, 0.8),
     0 0 10px rgba(255, 121, 198, 0.6),
-    0 0 15px rgba(189, 147, 233, 0.8), /* Purple glow */
+    0 0 15px rgba(189, 147, 233, 0.8),
     0 0 20px rgba(189, 147, 233, 0.5);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -86,22 +74,18 @@ header p {
     color: #f8f8f2;
     border: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center; /* Center text in card */
-    border-radius: 10px; /* Rounded corners */
-    padding: 20px; /* Padding inside the card */
+    text-align: center;
+    border-radius: 10px; 
+    padding: 20px;
 }
 
 .tech-card:hover {
-    background-color: #6272a4; /* Change background on hover */
-    transform: translateY(-5px); /* Slight lift effect */
+    background-color: #6272a4;
+    transform: translateY(-5px);
 }
-
-/* Tech icon styles */
 .tech-icon {
-    color: #bd93f9; /* Icon color */
+    color: #bd93f9;
 }
-
-/* Contact Icons styles */
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -112,16 +96,15 @@ header p {
 
 .contact-icon {
     margin: 20px;
-    color: #f8f8f2; /* Icon color */
-    transition: color 0.3s, transform 0.3s; /* Transition for hover effects */
+    color: #f8f8f2;
+    transition: color 0.3s, transform 0.3s; 
 }
 
 .contact-icon:hover {
-    color: #bd93f9; /* Change color on hover */
-    transform: scale(1.2); /* Slightly enlarge the icon on hover */
-}
+    color: #bd93f9;
+    transform: scale(1.2);
+}  
 
-/* Footer styles */
 footer {
   background-color: #44475a;
   color: #f8f8f2;
@@ -132,8 +115,6 @@ footer {
   bottom: 0;
   width: 100%;
 }
-
-/* Responsive styles */
 @media (max-width: 768px) {
   header h1 {
     font-size: 36px;
@@ -149,16 +130,16 @@ footer {
   }
 
   .section {
-    padding: 15px; /* Adjust padding for smaller screens */
+    padding: 15px; 
   }
 
   .tech-card {
-    margin-bottom: 20px; /* Space between cards on mobile */
+    margin-bottom: 20px;
   }
 }
 .highlight {
-  background-color: rgba(255, 255, 255, 0.2); /* Light purple background */
-  color: #f090e8; /* Darker text color for contrast */
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #f090e8;
   padding: 15px; /* Padding around the text */
   border-radius: 5px; /* Rounded corners */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
