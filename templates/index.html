@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ data.name }}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/1bd99a004e.js" crossorigin="anonymous"></script>
 </head>
@@ -29,7 +29,7 @@
                     <a class="nav-link" href="#tech">Tech I Use</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a> <!-- Added Contact link -->
+                    <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
         </div>
@@ -49,7 +49,7 @@
         <h2>Experience</h2>
         {% for job in data.experience %}
             <p><strong>{{ job.title }}</strong> ({{ job.duration }})</p>
-            <ul class="list-unstyled"> <!-- Removed bullets -->
+            <ul class="list-unstyled">
                 {% for detail in job.details %}
                     <li>{{ detail }}</li>
                 {% endfor %}
@@ -172,7 +172,6 @@
     document.querySelectorAll('nav a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
-
             document.querySelector(this.getAttribute('href')).scrollIntoView({
                 behavior: 'smooth'
             });
