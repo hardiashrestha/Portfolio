@@ -20,22 +20,36 @@ body {
 }
 
 .navbar-nav .nav-link {
-  padding: 10px 15px;
-  font-size: 18px;
-  color: #f8f8f2;
+  padding: 10px 15px; 
+  font-size: 18px; 
+  color: #f8f8f2; 
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-nav .nav-link:hover {
   color: #bd93f9;
+  transform: scale(1.1);
 }
 
 .section {
-  padding: 5vh 5vw;
+  padding: 5vh 5vw; 
   background-color: #44475a;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  margin-bottom: 30px;
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+  margin-bottom: 30px; 
   padding-top: 80px;
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
 
 header {
@@ -76,7 +90,7 @@ header p {
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 10px; 
   padding: 20px;
   margin-bottom: 20px;
 }
@@ -101,13 +115,13 @@ header p {
 .contact-icon {
   margin: 20px;
   color: #f8f8f2;
-  transition: color 0.3s, transform 0.3s;
+  transition: color 0.3s, transform 0.3s; 
 }
 
 .contact-icon:hover {
   color: #bd93f9;
   transform: scale(1.2);
-}
+}  
 
 footer {
   background-color: #44475a;
@@ -134,7 +148,7 @@ footer {
   }
 
   .section {
-      padding: 15px;
+      padding: 15px; 
   }
 
   .tech-card {
@@ -142,6 +156,16 @@ footer {
   }
 
   .contact-icons {
-      flex-direction: column;
+      flex-direction: column; 
   }
+}
+
+.highlight {
+  background-color: rgba(255, 255, 255, 0.2); 
+  color: #f090e8;
+  padding: 15px; 
+  border-radius: 5px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  margin-top: 20px; 
+  font-style: italic; 
 }
