@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ data.name }}</title>
+    <title>{{ data.name }} - Portfolio</title>
+    <meta name="description" content="Welcome to the portfolio of Shrestha Hardia, a passionate AI and machine learning enthusiast. Explore my projects, skills, and experiences.">
+    <meta name="keywords" content="portfolio, AI, machine learning, web development, Shrestha Hardia">
+    <meta name="author" content="Shrestha Hardia">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
@@ -40,7 +43,7 @@
     <section id="about" class="section">
         <div class="text-center">
             <h1><span class="name">{{ data.name }}</span></h1>
-            <img align="center" alt="Coding" width="100%" max-width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
+            <img align="center" alt="Shrestha Hardia coding at a computer" width="100%" max-width="400" src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif">
             <p class="highlight">{{ data.about }}</p>
         </div>
     </section>
@@ -173,24 +176,23 @@
 
 <script>
     document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
 
-const themeToggle = document.getElementById('themeToggle');
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    if (document.body.classList.contains('light-mode')) {
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for light mode
-    } else {
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for dark mode
-    }
-});
-
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        if (document.body.classList.contains('light-mode')) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        }
+    });
 </script>
 
 </body>
