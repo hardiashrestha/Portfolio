@@ -60,8 +60,10 @@ header p {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 48px;
-  text-shadow: 0 0 5px rgba(255, 121, 198, 0.8), 0 0 10px rgba(255, 121, 198, 0.6),
-    0 0 15px rgba(189, 147, 233, 0.8), 0 0 20px rgba(189, 147, 233, 0.5);
+  text-shadow: 0 0 5px rgba(255, 121, 198, 0.8),
+               0 0 10px rgba(255, 121, 198, 0.6),
+               0 0 15px rgba(189, 147, 233, 0.8),
+               0 0 20px rgba(189, 147, 233, 0.5);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -70,7 +72,6 @@ header p {
   filter: brightness(120%);
 }
 
-/* Tech Cards styles */
 .tech-card {
   background-color: #44475a;
   color: #f8f8f2;
@@ -81,7 +82,6 @@ header p {
   padding: 20px;
   margin-bottom: 20px;
 }
-
 .tech-card:hover {
   background-color: #6272a4;
   transform: translateY(-5px);
@@ -123,32 +123,26 @@ footer {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 36px;
+      font-size: 28px;
   }
 
   header p {
-    font-size: 18px;
+      font-size: 16px;
   }
 
   .navbar-nav .nav-link {
-    font-size: 16px;
+      font-size: 14px;
   }
 
   .section {
-    padding: 15px;
+      padding: 15px;
   }
 
-  .container {
-    padding: 0 15px;
+  .tech-card {
+      margin-bottom: 20px; /* Ensure spacing between cards */
   }
-}
 
-.highlight {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #f090e8;
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  font-style: italic;
+  .contact-icons {
+      flex-direction: column;
+  }
 }
