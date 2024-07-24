@@ -32,7 +32,6 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
-            <button id="themeToggle" class="btn btn-outline-light ml-auto">Toggle Dark/Light Mode</button>
         </div>
     </div>
 </nav>
@@ -166,6 +165,9 @@
 <footer>
     <div class="container text-center">
         <p>© 2024 {{ data.name }}. All rights reserved.</p>
+        <button id="themeToggle" class="btn btn-outline-light">
+            <i class="fas fa-adjust"></i>
+        </button>
     </div>
 </footer>
 
@@ -183,9 +185,9 @@
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('light-mode');
         if (document.body.classList.contains('light-mode')) {
-            themeToggle.innerText = 'Toggle Dark Mode';
+            themeToggle.innerHTML = '<i class="fas fa-adjust"></i>';
         } else {
-            themeToggle.innerText = 'Toggle Light Mode';
+            themeToggle.innerHTML = '<i class="fas fa-adjust"></i>';
         }
     });
 </script>
