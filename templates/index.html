@@ -32,6 +32,7 @@
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
             </ul>
+            <button id="themeToggle" class="btn btn-outline-light ml-auto">Toggle Dark/Light Mode</button>
         </div>
     </div>
 </nav>
@@ -176,6 +177,16 @@
                 behavior: 'smooth'
             });
         });
+    });
+
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        if (document.body.classList.contains('light-mode')) {
+            themeToggle.innerText = 'Toggle Dark Mode';
+        } else {
+            themeToggle.innerText = 'Toggle Light Mode';
+        }
     });
 </script>
 
