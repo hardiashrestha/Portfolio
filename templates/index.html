@@ -173,23 +173,24 @@
 
 <script>
     document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
         });
     });
+});
 
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
-            themeToggle.innerHTML = '<i class="fas fa-adjust"></i>';
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-adjust"></i>';
-        }
-    });
+const themeToggle = document.getElementById('themeToggle');
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+    if (document.body.classList.contains('light-mode')) {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>'; // Sun icon for light mode
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>'; // Moon icon for dark mode
+    }
+});
+
 </script>
 
 </body>
