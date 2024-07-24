@@ -3,36 +3,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: 'Ubuntu', sans-serif;
-  background-color:#282a36;
+  background-color: #282a36;
   background: linear-gradient(to right, #1e1e2f, #2e2e3a);
   color: #f8f8f2;
   line-height: 1.6;
 }
+
 .navbar {
-    background-color: rgba(68, 71, 90, 0.7);
-    padding: 10px 0;
-    background: rgba(30, 30, 47, 0.8);
-    backdrop-filter: blur(5px);
+  background-color: rgba(68, 71, 90, 0.7);
+  padding: 10px 0;
+  background: rgba(30, 30, 47, 0.8);
+  backdrop-filter: blur(5px);
 }
+
 .navbar-nav .nav-link {
-    padding: 10px 15px; 
-    font-size: 18px; 
-    color: #f8f8f2; 
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #f8f8f2;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #bd93f9;
+  color: #bd93f9;
 }
 
 .section {
-    padding: 5vh 5vw; 
-    background-color: #44475a;
-    border-radius: 10px; 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-    margin-bottom: 30px; 
-    padding-top: 80px;
+  padding: 5vh 5vw;
+  background-color: #44475a;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  padding-top: 80px;
 }
 
 header {
@@ -44,22 +47,21 @@ header {
 
 header h1 {
   margin-bottom: 10px;
+  font-size: 36px;
 }
 
 header p {
-  font-size: 20px;
+  font-size: 18px;
 }
+
 .name {
   background: linear-gradient(90deg, #ff79c6, #bd93f9);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 48px;
-  text-shadow: 
-    0 0 5px rgba(255, 121, 198, 0.8),
-    0 0 10px rgba(255, 121, 198, 0.6),
-    0 0 15px rgba(189, 147, 233, 0.8),
-    0 0 20px rgba(189, 147, 233, 0.5);
+  text-shadow: 0 0 5px rgba(255, 121, 198, 0.8), 0 0 10px rgba(255, 121, 198, 0.6),
+    0 0 15px rgba(189, 147, 233, 0.8), 0 0 20px rgba(189, 147, 233, 0.5);
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -70,40 +72,43 @@ header p {
 
 /* Tech Cards styles */
 .tech-card {
-    background-color: #44475a;
-    color: #f8f8f2;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    text-align: center;
-    border-radius: 10px; 
-    padding: 20px;
+  background-color: #44475a;
+  color: #f8f8f2;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .tech-card:hover {
-    background-color: #6272a4;
-    transform: translateY(-5px);
+  background-color: #6272a4;
+  transform: translateY(-5px);
 }
+
 .tech-icon {
-    color: #bd93f9;
+  color: #bd93f9;
 }
+
 .contact-icons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .contact-icon {
-    margin: 20px;
-    color: #f8f8f2;
-    transition: color 0.3s, transform 0.3s; 
+  margin: 20px;
+  color: #f8f8f2;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .contact-icon:hover {
-    color: #bd93f9;
-    transform: scale(1.2);
-}  
+  color: #bd93f9;
+  transform: scale(1.2);
+}
 
 footer {
   background-color: #44475a;
@@ -115,6 +120,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
+
 @media (max-width: 768px) {
   header h1 {
     font-size: 36px;
@@ -124,25 +130,25 @@ footer {
     font-size: 18px;
   }
 
-  nav a {
-    margin: 0 10px;
+  .navbar-nav .nav-link {
     font-size: 16px;
   }
 
   .section {
-    padding: 15px; 
+    padding: 15px;
   }
 
-  .tech-card {
-    margin-bottom: 20px;
+  .container {
+    padding: 0 15px;
   }
 }
+
 .highlight {
-  background-color: rgba(255, 255, 255, 0.2); 
+  background-color: rgba(255, 255, 255, 0.2);
   color: #f090e8;
-  padding: 15px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  margin-top: 20px; /* Space above the highlighted text */
-  font-style: italic; /* Italics for emphasis */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  font-style: italic;
 }
