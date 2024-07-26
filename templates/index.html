@@ -168,9 +168,6 @@
 <footer>
     <div class="container text-center">
         <p>© 2024 {{ data.name }}. All rights reserved.</p>
-        <button id="themeToggle" class="btn btn-outline-light">
-            <i class="fas fa-adjust"></i>
-        </button>
     </div>
 </footer>
 
@@ -184,13 +181,27 @@
         });
     });
 
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        if (document.body.classList.contains('light-mode')) {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    const sections = document.querySelectorAll('.sections section');
+    const navbar = document.querySelector('.navbar');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY;
+
+        sections.forEach((section, index) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+
+            if (scrollPosition + window.innerHeight > sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+
+        if (scrollPosition + window.innerHeight > navbar.offsetTop) {
+            navbar.classList.add('active');
         } else {
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            navbar.classList.remove('active');
         }
     });
 </script>
