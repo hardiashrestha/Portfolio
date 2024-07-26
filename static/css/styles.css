@@ -68,16 +68,11 @@ header p {
 }
 
 .name {
-    background: linear-gradient(90deg, #58a6ff, #8b949e);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 48px;
+    @apply text-5xl font-bold text-transparent bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text;
     text-shadow: 0 0 5px rgba(88, 166, 255, 0.8), 0 0 10px rgba(88, 166, 255, 0.6),
                  0 0 15px rgba(139, 148, 158, 0.8), 0 0 20px rgba(139, 148, 158, 0.5);
     transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .name:hover {
     transform: scale(1.05);
     filter: brightness(120%);
